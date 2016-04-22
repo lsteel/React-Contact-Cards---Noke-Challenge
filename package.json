@@ -1,0 +1,24 @@
+{
+  "name": "react-contact-cards-noke-challenge",
+  "version": "1.0.0",
+  "description": "This was my attempt at a code challenge by Noke.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lsteel/React-Contact-Cards---Noke-Challenge.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lsteel/React-Contact-Cards---Noke-Challenge/issues"
+  },
+  "homepage": "https://github.com/lsteel/React-Contact-Cards---Noke-Challenge#readme",
+  "dependencies": {
+    "babel-core": "^6.7.7",
+    "babel-polyfill": "^6.7.4",
+    "babel-preset-es2015": "^6.6.0"
+  }
+}
