@@ -1,0 +1,11 @@
+.heading {
+  font-size: 100%;
+}
+.contactList {
+  margin: 0 auto;
+  padding: 0;
+  list-style: none;
+}
+.contactList li {
+  cursor: pointer;
+}

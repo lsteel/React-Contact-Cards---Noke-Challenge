@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import styles from './App.css'
 import ContactList from './ContactList'
 import ContactCard from './ContactCard'
 
@@ -69,7 +70,7 @@ class App extends Component {
     console.log('rendering App')
     console.log(this.state.currContact)
     return (
-      <div>
+      <div className={styles.container}>
         <ContactList
           contacts={this.state.contacts}
           onContactClick={this.toggleContact}
