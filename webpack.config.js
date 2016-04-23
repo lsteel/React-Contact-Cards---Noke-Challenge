@@ -8,7 +8,7 @@ module.exports = {
     publicPath: '/'
   },
   plugins: [],
-  modules: {
+  module: {
     loaders: [
       {
         test: /\.js$/,
@@ -16,7 +16,7 @@ module.exports = {
         exclude: /node_modules/,
         include: __dirname,
         query: {
-          presets: ['es2015', 'react']
+          presets: ['react', 'es2015']
         }
       }
     ]

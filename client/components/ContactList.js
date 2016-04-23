@@ -5,11 +5,11 @@ const ContactList = (props) => {
   return (
     <ul>
       {
-        props.contacts.map((contact) => {
+        props.contacts.map((contact, index) => {
           return (
-            <li key={contact.id}>
+            <li key={index}>
               <Contact
-                Name={contact.Name}
+                name={contact.Name}
                 onClick={() => props.onContactClick(contact)}
               />
             </li>
