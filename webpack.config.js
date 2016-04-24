@@ -12,6 +12,10 @@ module.exports = {
     loaders: [
       {
         test: /\.js$/,
+        loader: 'transform?envify'
+      },
+      {
+        test: /\.js$/,
         loader: 'babel',
         exclude: /node_modules/,
         include: __dirname,
@@ -30,5 +34,19 @@ module.exports = {
         exclude: /node_modules/
       }
     ]
+  },
+  devServer: {
+    proxy: {
+      '**': `http://localhost:${config.get('port')}`
+    }
   }
+}
+
+
+if (process.env.NODE_ENV === 'production') {
+  module.exports.plugins.push(new webpack.optimize.UglifyJsPlugin({
+    compress: {
+      warnings: false
+    }
+  }))
 }
