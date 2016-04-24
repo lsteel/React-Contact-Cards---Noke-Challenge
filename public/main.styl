@@ -49,13 +49,53 @@ img
 html
   -webkit-font-smoothing: antialiased;
 
-html, body
+html, body, #root
   margin 0 auto
   padding 0
   width 100%
-  height auto
+  height 100%
   font-size 14px
   letter-spacing -.5px
   font-weight 400
   font-family 'Lato', sans-serif
   color $dark-grey
+
+	/*
+  	Flaticon icon font: Flaticon
+  	Creation date: 24/04/2016 06:02
+  	*/
+
+
+//FONT IMPORTS
+
+@font-face {
+  font-family: "Flaticon";
+  src: url("./fonts/icon-font/font/Flaticon.eot");
+  src: url("./fonts/icon-font/font/Flaticon.eot?#iefix") format("embedded-opentype"),
+       url("./fonts/icon-font/font/Flaticon.woff") format("woff"),
+       url("./fonts/icon-font/font/Flaticon.ttf") format("truetype"),
+       url("./fonts/icon-font/font/Flaticon.svg#Flaticon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: "Flaticon";
+    src: url("./fonts/icon-font/font/Flaticon.svg#Flaticon") format("svg");
+  }
+}
+
+[class^="flaticon-"]:before, [class*=" flaticon-"]:before,
+[class^="flaticon-"]:after, [class*=" flaticon-"]:after {
+  font-family: Flaticon;
+        font-size: 20px;
+font-style: normal;
+}
+
+.flaticon-bars:before { content: "\f100"; }
+.flaticon-circle:before { content: "\f101"; }
+.flaticon-envelope:before { content: "\f102"; }
+.flaticon-food:before { content: "\f103"; }
+.flaticon-gps:before { content: "\f104"; }
+.flaticon-technology:before { content: "\f105"; }

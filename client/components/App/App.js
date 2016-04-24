@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
 import styles from './App.css'
-import ContactList from './ContactList'
-import ContactCard from './ContactCard'
+import MenuIcon from '../MenuIcon/MenuIcon'
+import ContactList from '../ContactList/ContactList'
+import ContactCard from '../ContactCard/ContactCard'
 
 const contacts = [
   {
@@ -52,26 +53,36 @@ const contacts = [
   }
 ]
 
-var currContact = {}
+var currContact = contacts[0]
 
 class App extends Component {
 
   constructor(props) {
     super(props)
-    this.state = { contacts: contacts, currContact: currContact }
+    this.state = { contacts: contacts, currContact: currContact, menuActive: false }
     this.toggleContact = this.toggleContact.bind(this)
+    this.menuClick = this.menuClick.bind(this)
   }
 
   toggleContact(contact) {
-    this.setState({ currContact: contact })
+    this.setState({ currContact: contact, menuActive: false })
+  }
+
+  menuClick(state) {
+    this.setState({ menuActive: !state.menuActive })
   }
 
   render() {
-    console.log('rendering App')
-    console.log(this.state.currContact)
+    // console.log('rendering App')
+    // console.log(this.state.currContact)
     return (
       <div className={styles.container}>
+        <MenuIcon
+          state={this.state}
+          onMenuClick={this.menuClick}
+        />
         <ContactList
+          state={this.state}
           contacts={this.state.contacts}
           onContactClick={this.toggleContact}
         />

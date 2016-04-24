@@ -1,0 +1,89 @@
+.cardContainer {
+  width: 100%;
+  text-align: center;
+}
+.cardPhotoWrapper {
+  display: inline-block;
+  margin: 40px auto 10px;
+  width: 150px;
+  height: 150px;
+  border: 2px solid #fff;
+  border-radius: 100%;
+  -webkit-box-shadow: 0px 0px 8px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 0px 8px 0px rgba(0,0,0,0.75);
+  box-shadow: 0px 0px 8px 0px rgba(0,0,0,0.75);
+  overflow: hidden;
+}
+.cardPhotoWrapper > img {
+  min-width: 100%;
+  min-height: 100%;
+  max-width: 100%;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+.cardInfoWrapper {
+  display: block;
+  margin: 0 auto;
+  width: 90%;
+  max-width: 200px;
+}
+.cardInfoWrapper > * {
+  padding: 3px 0 10px;
+}
+.cardInfoWrapper a:link,
+.cardInfoWrapper a:visited,
+.cardInfoWrapper a:hover,
+.cardInfoWrapper a:active {
+  text-decoration: none;
+}
+.cardInfoWrapper span:before {
+  margin-right: 5px;
+  font-size: 150%;
+  vertical-align: -2px;
+}
+.name {
+  padding-bottom: 2px;
+  font-size: 250%;
+}
+.title {
+  font-size: 130%;
+  font-weight: 200;
+  font-style: italic;
+}
+.phone,
+.email,
+.address,
+.birthday {
+  text-align: left;
+}
+.address .flaticon-gps:before {
+  font-size: 22px;
+}
+.address .leftMargin {
+  display: inline-block;
+  margin-left: 28px;
+}
+@media (min-width: 1024px) {
+  .cardContainer {
+    display: inline-block;
+    padding-top: 50px;
+    vertical-align: top;
+    width: 75%;
+  }
+  .cardPhotoWrapper,
+  .cardInfoWrapper {
+    display: inline-block;
+    margin-right: 30px;
+    margin-left: 30px;
+    width: 50%;
+  }
+  .cardPhotoWrapper {
+    max-width: 200px;
+    height: 200px;
+  }
+  .name,
+  .title {
+    text-align: left;
+  }
+}

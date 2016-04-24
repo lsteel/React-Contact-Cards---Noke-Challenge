@@ -1,16 +1,46 @@
-// out: ../ContactList.css, sourcemap: false, compress: false
+// out: ../ContactList/ContactList.css, sourcemap: false, compress: false
+
+.header
+  width 100%
 
 .heading
-  font-size 100%
+  padding 10px
+  text-align center
+  font-size 200%
+  > span:before
+    margin-right 5px
+    font-size 100%
 
 .contactList
+  position absolute
   margin 0 auto
   padding 0
+  width 100%
   list-style none
-  li
-    cursor pointer
+  background white
+  overflow hidden
+  z-index 9999
 
-// @media (min-width: 768px)
-//
-//   .contactList
-//     background-color black
+.listItem
+  cursor pointer
+  border-top 1px solid grey
+  &:last-child
+    border-bottom 1px solid grey
+
+@media (min-width: 1024px)
+
+  .header
+    display inline-block
+    width 24%
+    height 100%
+    vertical-align top
+    border-right 1px solid grey
+
+  .contactList
+    position relative
+    height auto
+
+  .listItem
+    border 0
+    &:last-child
+      border 0

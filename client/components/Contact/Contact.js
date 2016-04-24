@@ -1,4 +1,5 @@
 import React from 'react'
+import styles from './Contact.css'
 // Even though we don't use React directly, the process to convert JSX into
 // `React.createElement()` calls needs `React` available
 
@@ -9,7 +10,12 @@ const Contact = (props) => {
   // }
   return (
     // <span style={styles} onClick={() => props.onClick()}>{props.name}</span>
-    <span onClick={() => props.onClick()}>{props.name}</span>
+    <span
+    className={styles.itemText}
+      onClick={() => props.onClick()}
+    >
+        {props.name}
+    </span>
   )
 }
 

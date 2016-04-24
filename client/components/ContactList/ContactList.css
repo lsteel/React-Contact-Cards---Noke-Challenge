@@ -1,0 +1,48 @@
+.header {
+  width: 100%;
+}
+.heading {
+  padding: 10px;
+  text-align: center;
+  font-size: 200%;
+}
+.heading > span:before {
+  margin-right: 5px;
+  font-size: 100%;
+}
+.contactList {
+  position: absolute;
+  margin: 0 auto;
+  padding: 0;
+  width: 100%;
+  list-style: none;
+  background: #fff;
+  overflow: hidden;
+  z-index: 9999;
+}
+.listItem {
+  cursor: pointer;
+  border-top: 1px solid #808080;
+}
+.listItem:last-child {
+  border-bottom: 1px solid #808080;
+}
+@media (min-width: 1024px) {
+  .header {
+    display: inline-block;
+    width: 24%;
+    height: 100%;
+    vertical-align: top;
+    border-right: 1px solid #808080;
+  }
+  .contactList {
+    position: relative;
+    height: auto;
+  }
+  .listItem {
+    border: 0;
+  }
+  .listItem:last-child {
+    border: 0;
+  }
+}
